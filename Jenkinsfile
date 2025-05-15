@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'main', url: 'https://github.com/NuntawutK/terraform-docker-nginx.git'
+        git branch: 'main', url: 'https://github.com/gtwndtl/terraform-docker.git'
       }
     }
 
