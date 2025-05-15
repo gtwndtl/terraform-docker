@@ -14,19 +14,25 @@ pipeline {
 
     stage('Terraform Init') {
       steps {
-        sh 'terraform init'
+        dir('terraform') {  // เปลี่ยนไปยังโฟลเดอร์ terraform
+          sh 'terraform init'
+        }
       }
     }
 
     stage('Terraform Plan') {
       steps {
-        sh 'terraform plan'
+        dir('terraform') {  // เปลี่ยนไปยังโฟลเดอร์ terraform
+          sh 'terraform plan'
+        }
       }
     }
 
     stage('Terraform Apply') {
       steps {
-        sh 'terraform apply -auto-approve'
+        dir('terraform') {  // เปลี่ยนไปยังโฟลเดอร์ terraform
+          sh 'terraform apply -auto-approve'
+        }
       }
     }
   }
