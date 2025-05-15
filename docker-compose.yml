@@ -13,6 +13,7 @@ services:
     environment:
       - TF_IN_AUTOMATION=true
     restart: unless-stopped
+    user: root  # เพิ่มบรรทัดนี้
 
   nginx:
     image: nginx
